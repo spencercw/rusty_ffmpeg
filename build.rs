@@ -56,6 +56,7 @@ static HEADERS: Lazy<Vec<PathBuf>> = Lazy::new(|| {
         "libavutil/frame.h",
         "libavutil/hash.h",
         "libavutil/hmac.h",
+        "libavutil/hwcontext_vulkan.h",
         "libavutil/imgutils.h",
         "libavutil/lfg.h",
         "libavutil/log.h",
