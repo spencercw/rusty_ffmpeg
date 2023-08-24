@@ -165,7 +165,7 @@ fn generate_bindings(ffmpeg_include_dir: Option<&Path>, headers: &[PathBuf]) -> 
 fn static_linking_with_libs_dir(library_names: &[&str], ffmpeg_libs_dir: &Path) {
     println!("cargo:rustc-link-search=native={}", ffmpeg_libs_dir);
     for library_name in library_names {
-        println!("cargo:rustc-link-lib=static={}", library_name);
+        println!("cargo:rustc-link-lib={}", library_name);
     }
 }
 
