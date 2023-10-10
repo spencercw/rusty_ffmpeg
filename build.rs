@@ -158,6 +158,13 @@ fn generate_bindings(ffmpeg_include_dir: Option<&Path>, headers: &[PathBuf]) -> 
             },
             |builder, header| builder.header(header),
         )
+        .allowlist_file(".*libavcodec.*")
+        .allowlist_file(".*libavdevice.*")
+        .allowlist_file(".*libavfilter.*")
+        .allowlist_file(".*libavformat.*")
+        .allowlist_file(".*libavutil.*")
+        .allowlist_file(".*libswresample.*")
+        .allowlist_file(".*libswscale.*")
         .generate()
         .expect("Binding generation failed.")
 }
